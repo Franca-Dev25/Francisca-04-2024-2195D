@@ -5,7 +5,6 @@ public class StudentInfo {
 
         Scanner input = new Scanner(System.in);
 
-        // ===== Collecting Student Information =====
         System.out.print("Enter Full Name: ");
         String fullName = input.nextLine();
 
@@ -18,7 +17,7 @@ public class StudentInfo {
         System.out.print("Enter Gender (M/F): ");
         char gender = input.next().charAt(0);
 
-        input.nextLine(); // consume leftover newline
+        input.nextLine(); 
 
         System.out.print("Enter Department: ");
         String department = input.nextLine();
@@ -29,7 +28,6 @@ public class StudentInfo {
         System.out.print("Enter GPA: ");
         double gpa = input.nextDouble();
 
-        // ===== Processing Information =====
         String adultStatus = (age >= 18) ? "YES" : "NO";
 
         String academicClass;
@@ -42,8 +40,7 @@ public class StudentInfo {
         } else {
             academicClass = "Pass";
         }
-
-        // ===== Display Student Profile =====
+        
         System.out.println("\n===== STUDENT PROFILE =====");
         System.out.println("Name: " + fullName);
         System.out.println("Index: " + indexNumber);
@@ -54,7 +51,7 @@ public class StudentInfo {
         System.out.println("GPA: " + gpa);
         System.out.println("Adult Status: " + adultStatus);
         System.out.println("Academic Class: " + academicClass);
-        System.out.println("===========================");
+        
 
         input.close();
     }
